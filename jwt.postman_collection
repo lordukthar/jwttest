@@ -1,0 +1,76 @@
+{
+	"variables": [],
+	"info": {
+		"name": "jwt",
+		"_postman_id": "d5c32806-a280-b67e-954c-35d17af427d7",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/auth/login",
+			"request": {
+				"url": "http://localhost:8080/api/auth/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW5pc3RyYXRvcjoxMjM0NQ==",
+						"description": ""
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"user\",\n\t\"password\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/secured/user",
+			"request": {
+				"url": "http://localhost:8080/api/secured/user",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhNGoiOiJ7XCJ1c2VybmFtZVwiOlwianVzdC11c2VyXCIsXCJwcml2aWxlZ2VzXCI6W1wiVVNFUlwiXX0ifQ==.01gBXLp9mz6HRn4rJX+5J4mrygbSBfi2QDDC6oPmLhI=",
+						"description": ""
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "X-auth",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhNGoiOiJ7XCJ1c2VybmFtZVwiOlwianVzdC11c2VyXCIsXCJwcml2aWxlZ2VzXCI6W1wiVVNFUlwiXX0ifQ==.01gBXLp9mz6HRn4rJX+5J4mrygbSBfi2QDDC6oPmLhI=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"user\",\n\t\"password\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

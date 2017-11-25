@@ -1,0 +1,12 @@
+authHeader: X-auth
+authSalt: super-secret
+server:
+  rootPath: /api/*
+
+logging:
+  appenders:
+  - type: console
+    threshold: ALL
+    timeZone: UTC
+    target: stdout
+    logFormat: '[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%-5level] [%d{yyyy-MM-dd HH:mm:ss} - %msg%method] [%class{0}:%method:%line] [%thread] [-[%msg]-] %n'
